@@ -1,0 +1,176 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model List<Repository>
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Company</title>
+
+    <style>
+
+        a {
+            text-decoration: none;
+        }
+
+        h1 {
+            text-align:center;
+            justify-content:center;
+            font-size: 60px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: white;
+        }
+
+        h2 {
+            color: #000;
+            font-size: 32px;
+            font-weight: 400;
+            text-transform: capitalize;
+        }
+
+        .w-100 {
+            width: 100%;
+        }
+
+        body {
+            font-family: 'Fira Sans', sans-serif;
+            color: rgb(104, 104, 104);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h1 {
+            font-size: 60px;
+            color: white;
+        }
+
+        h2 {
+            color: #000;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 32px;
+            font-weight: 400;
+            text-transform: capitalize;
+        }
+
+        
+        .header .he {
+            background-size: cover;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        .overlay {
+            background-color: #54585c;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: .6;
+        }
+
+        .header-content {
+            position: absolute;
+            top: 40%;
+            left: 27%;
+            text-align: center;
+            color: white;
+        }
+
+            .header-content h1 {
+                text-transform: capitalize;
+            }
+
+            .header-content p {
+                margin: 10px 0;
+                margin: auto;
+            }
+
+            .header-content .btn .learn {
+                background-color: white;
+                padding: 12px 14px;
+                border-radius: 5px;
+                color: black;
+                text-transform: capitalize;
+                display: inline-block;
+                margin-right: 10px;
+            }
+
+                .header-content .btn .learn:hover {
+                    background-color: rgba(255, 255, 255, 0.808);
+                }
+
+        .Login {
+            padding: 10px 10px;
+            border-radius: 5px;
+            border: 2px solid white;
+            color: white;
+            text-transform: capitalize;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .Login {
+            background-color: white;
+            color: red;
+        }
+
+        img {
+
+
+            height:400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="he">
+            <div class="img-">
+                <img src="images/images.jpg" alt="Car image" />
+            </div>
+            <div class="overlay"></div>
+        </div>
+        <div class="header-content">
+            <h1 style="align-content:center">Welcome  to the Sanin Cars</h1>
+            <p>Your complete solution for managing car dealership operations</p>
+            <br />
+            <div class="btn">
+                <a href="#bottom-section" class="learn">About Us</a>
+                <a asp-controller="Car" asp-action="Login" class="Login">Login</a>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+
+
+    <div id="bottom-section">
+        <h2>About Us</h2>
+        <p>
+            Welcome to Sanin Cars — the ultimate platform for simplifying car trading and management
+            for both businesses and customers. Our mission is to deliver a seamless, efficient, 
+            and user-friendly experience that empowers car companies to manage inventory,
+            process transactions, and connect with customers effortlessly. With our smart tools, 
+            businesses can easily list, update, and organize their cars, while customers can explore,
+            compare, and reach dealers — all in one place.
+
+
+        </p>
+    </div>
+
+</body>
+</html>

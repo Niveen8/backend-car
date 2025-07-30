@@ -1,0 +1,48 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Repository
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CarRepository</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="container">
+        <form asp-action="Add" asp-controller="Car" method="post">
+            <div>
+                <label asp-for="Make">Car Make</label>
+                <input asp-for="Make" class="form-control" />
+            </div>
+            <div>
+                <label asp-for="CarId">Car Id</label>
+                <input asp-for="CarId" class="form-control" />
+            </div>
+            <div>
+                <label asp-for="AdminId">Admin Id</label>
+                <input asp-for="AdminId" class="form-control" />
+            </div>
+           
+            <br />
+            <div>
+                <label asp-for="CarId">Car Color</label>
+                <select asp-for="Make">
+                    <option value="">Select your Car Model</option>
+                    @foreach (Car c in ViewBag.Cars)
+                    {
+                        <option value="@c.CarId">@c.Model</option>
+                    }
+                </select>
+            </div>
+
+            <button class="btn btn-outline-secondary mt-3" type="submit">Add Car</button>
+        </form>
+    </div>
+</body>
+</html>

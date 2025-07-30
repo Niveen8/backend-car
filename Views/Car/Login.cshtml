@@ -1,0 +1,124 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <style>
+        .container {
+            width: 35%;
+            margin: auto;
+            overflow: hidden;
+            background-color: #000;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+
+        .head {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: plum;
+            text-align: center;
+        }
+
+
+        h1 {
+            font-size: 60px;
+            font-weight: bold;
+            color: plum;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-bottom: 20px;
+        }
+
+
+        label {
+            display: block;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+            text-align: left;
+        }
+
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border-color 0.3s ease-in-out;
+        }
+
+
+            input:focus {
+                border-color: plum;
+                outline: none;
+                box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+            }
+
+        /* Button styling */
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background-color: dimgrey;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+        }
+
+            .btn:hover {
+                background-color: #000;
+            }
+
+       
+
+        /* Style for input on focus */
+        input:focus {
+            border-color: plum;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <div class="container">
+            <h1>Login</h1>
+            <br />
+            <form asp-action="Login" asp-controller="Car" method="post">
+
+                <div class="l1">
+                    <label for="id1">Admin ID</label>
+                    <input id="id1" type="text" name="Aid" />
+                </div>
+
+                <div class="l2">
+                    <label for="pass">password</label>
+                    <input id="pass" type="password" name="Apass" />
+                </div>
+
+                <button class="btn btn-outline-secondary mt-3" type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
